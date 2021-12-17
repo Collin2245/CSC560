@@ -1,0 +1,22 @@
+{
+  "name": "unittwo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cdk": "^13.1.1",
+    "@angular/router": "^13.1.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.14",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.2"
+  }
+}

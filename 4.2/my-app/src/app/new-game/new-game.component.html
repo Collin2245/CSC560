@@ -1,0 +1,28 @@
+<p>new-game works!</p>
+<div class="Game input">
+        
+    <ul>
+        <li>
+            <p>Title</p>
+            <input #titleInput>
+        </li>
+        <li>
+            <p>System(s)</p>
+            <p-chips [(ngModel)]="systems" ></p-chips>
+            <!-- <input #systemInput> -->
+        </li>
+        <li>
+            <p>Genre(s)</p>
+            <p-chips [(ngModel)]="genres" ></p-chips>
+        </li>
+        <li>
+            <p>Date</p>
+            <input #dateInput type='date'>
+        </li>
+        <li>
+            <button class="CreateNewGame" (click)="createNewGame(titleInput.value,systems,genres,dateInput.valueAsNumber)">create</button>
+        </li>
+    </ul>
+    <button class='NewGame' routerLink='/'> Go back</button>
+
+</div>
