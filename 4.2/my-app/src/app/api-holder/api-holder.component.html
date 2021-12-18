@@ -6,10 +6,61 @@
         <li>something</li>
     </ul>
     <ul>
-        <p>Output</p>
-        <li>something</li>
-        <li>something</li>
+        <button class='NewGame' (click)="getGamesUpdate()"> Refresh Games</button>
+        <div *ngIf="games">
+            <a  *ngFor="let game of games" [routerLink]="['/game',game._id]" >
+                <p>{{game.Name}}</p>
+            </a>
+        </div>
+
     </ul>
+        <div *ngIf="currentGame">
+            <p>Currently selected game</p>
+            <ul>
+                <li>
+                    <p>
+                        <span>
+                            Title: 
+                        </span>
+                        <span>
+                            {{currentGame.Name}}
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>
+                            Systems: 
+                        </span>
+                        <span>
+                            {{currentGame.System}}
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>
+                            Genre: 
+                        </span>
+                        <span>
+                            {{currentGame.Genre}}
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>
+                            Release date: 
+                        </span>
+                        <span>
+                            {{currentGame.ReleaseDate}}
+                        </span>
+                    </p>
+                </li>
+            </ul>
+            <button (click)="deleteGame()">Delete current Game</button>
+        </div>
+
     <button class='NewGame' routerLink='/new-game'> New Game</button>
 
 </div>

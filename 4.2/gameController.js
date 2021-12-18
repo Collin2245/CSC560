@@ -28,7 +28,7 @@ exports.add = function (req, res) {
 //Save and check error
     game.save(function (err) {
         if (err)
-            res.json(err);
+        console.log(err)
     res.json({
             message: "New game Added!",
             data: game
@@ -39,7 +39,7 @@ exports.add = function (req, res) {
 exports.view = function (req, res) {
     Game.findById(req.params.game_id, function (err, game) {
         if (err)
-            res.send(err);
+            console.log(err)
         res.json({
             message: 'game Details',
             data: game

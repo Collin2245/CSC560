@@ -36,4 +36,17 @@ export class TaskService {
     
     return this.WebRequestService.post('api/game',{Name,System,Genre,ReleaseDate})
   }
+
+  getGames(){
+    return this.WebRequestService.get('api/game')
+  }
+
+  getGame(gameId: string){
+    return this.WebRequestService.get(`api/game/${gameId}`);
+  }
+
+  deleteGame(gameId: string){
+    return this.WebRequestService.delete(`api/game/${gameId}`);
+  }
+
 }
