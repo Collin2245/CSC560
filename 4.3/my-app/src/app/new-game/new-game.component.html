@@ -1,0 +1,23 @@
+<div class="GameInput">
+        
+
+            <p>Title</p>
+            <input pInputText class="p-inputtext-lg"  #titleInput>
+
+            <p>System(s)</p>
+            <p-chips [(ngModel)]="systems" ></p-chips>
+            <!-- <input #systemInput> -->
+
+            <p>Genre(s)</p>
+            <p-chips [(ngModel)]="genres" ></p-chips>
+
+            <p>Date</p>
+            <input pInputText class="p-inputtext-lg"  #dateInput type='date'>
+            <br>
+
+            <button pButton routerLink='/'  class="CreateNewGame" (click)="createNewGame(titleInput.value,systems,genres,dateInput.valueAsNumber)">Create</button>
+            <br>
+
+    <button pButton   class='NewGame p-p-1' routerLink='/'> Go back</button>
+
+</div>

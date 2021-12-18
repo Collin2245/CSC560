@@ -1,0 +1,16 @@
+.api-holder{
+    background-color: dimgrey;
+    border-radius: 10px;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.allGames{
+    background-color: mediumslateblue;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    border-style:solid;
+    padding-right: 5%;
+
+}

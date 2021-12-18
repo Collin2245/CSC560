@@ -1,0 +1,58 @@
+<div class = "api-holder">
+    <h1>Game Api</h1>
+
+
+        <div *ngIf="games" class="allGames">
+            <a  *ngFor="let game of games" [routerLink]="['/game',game._id]" >
+                <p>{{game.Name}}</p>
+            </a>
+        </div>
+
+        <div *ngIf="currentGame">
+            <p>Currently selected game</p>
+
+
+                    <p>
+                        <span>
+                            Title: 
+                        </span>
+                        <span class="p-text-right">
+                            {{currentGame.Name}}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>
+                            Systems: 
+                        </span>
+                        <span>
+                            {{currentGame.System}}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>
+                            Genre: 
+                        </span>
+                        <span>
+                            {{currentGame.Genre}}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>
+                            Release date: 
+                        </span>
+                        <span>
+                            {{currentGame.ReleaseDate}}
+                        </span>
+                    </p>
+
+
+            <button pButton  type="button" (click)="deleteGame()">Delete current Game</button>
+        </div>
+
+    <button pButton  class='NewGame' routerLink='/new-game'> New Game</button>
+
+</div>
+
